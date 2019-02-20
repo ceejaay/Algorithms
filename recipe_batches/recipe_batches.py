@@ -7,10 +7,21 @@ import math
 
 def recipe_batches(recipe, ingredients):
     # if teh recipe key is not in ingredients return 0
-    diff = recipe.keys() - ingredients.keys()
-    if diff in ingredients:
-        return true
-    # for key in recipe:
+    for i in recipe:
+        if i not in ingredients:
+            return False
+        else:
+            return True
+
+
+    # diff = recipe.keys() - ingredients.keys()
+    # diff =  ''.join(diff)
+
+    # # print(diff)
+    # if diff in ingredients:
+    #     print(True)
+
+    # for key in recipe: 
     #     if key not in ingredients.keys()
 
 
