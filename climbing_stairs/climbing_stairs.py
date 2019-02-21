@@ -43,12 +43,41 @@ def climbing_stairs(n, cache=None):
 #         while count < n
 #             return
 
+Step 5:
+    1 1 1 1 1
+    1 2 1 1
+    1 1 2 1
+    1 1 1 2
+    1 2 2
+    1 1 3
+    2 1 1 1
+    2 2 1
+    2 3
+    3 2
+    3 1 1
+    
 
 
 
 
 
+Step 3
+  1 + 1 + 1
+  2 + 1
+  1 + 2
 
+
+
+
+def fib(n):
+    if n == 0: return 0
+    elif n == 1: return 1
+    else: return fib(n - 3) + fib(n-3)
+
+
+
+
+print(fib(3))
 
 
 
