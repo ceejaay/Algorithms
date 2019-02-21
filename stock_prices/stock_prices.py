@@ -3,20 +3,46 @@
 import argparse
 
 def find_max_profit(prices):
+    pass
+    # # first round prices is 5
     index = len(prices)
+    # index is length of the price array
+    # print(index)
+    # we count down the array
+    while index > 1:
+    # index = len(prices)
     highest = -999999999999
-    while index >0:
-        for i in range(index, len(prices)):
-            if prices[i] - prices[index - 1] > highest:
-                highest = prices[i] - prices[index -1]
-            # print(f"{prices[i] - prices[index - 1]}")
         index -= 1
-        # print('*********')
+    #     find_max_profit(prices[index:])
+        # print(prices)
+    # while index >0:
+    #     for i in range(index, len(prices)):
+    #         if prices[i] - prices[index - 1] > highest:
+    #             highest = prices[i] - prices[index -1]
+    #         # print(f"{prices[i] - prices[index - 1]}")
+    #     index -= 1
+    #     # print('*********')
+
+n = [i for i in range(10)]
+def recurse(array):
+    index = len(array) # 10
+    print(index)
+    if index > 1:
+        print(array[:index])
+        index -= 1 #9
+        print(index)
+
+
+    #     print(array[index:])
+    # while len(array) > 1:
+    #     recurse(array[index:])
+    #     index -= 1
 
 
 
+print(recurse(n))
 
-    return highest
+    # return highest
 
 
 # for the first item we check them all.
@@ -24,8 +50,8 @@ def find_max_profit(prices):
 #     the third item we check excluding the first and second
 #     the foruth item we check excludint the 
 print(find_max_profit([1050, 270, 1540, 3800, 2]))
-print(find_max_profit([10, 7, 5, 8, 11, 9]))
-print(find_max_profit([100, 90, 80, 50, 20, 10]))
+# print(find_max_profit([10, 7, 5, 8, 11, 9]))
+# print(find_max_profit([100, 90, 80, 50, 20, 10]))
 # So we want to look at the first price. 
 # compare it to the later prices. See what the profit is for each one after the price.
 # so you want to compare each price AFTER that price. Then return the one that is greatest.
