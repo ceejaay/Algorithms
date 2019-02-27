@@ -3,47 +3,31 @@
 import argparse
 
 def find_max_profit(prices):
-    pass
-    # # first round prices is 5
+    # set index to length of array
     index = len(prices)
     # index is length of the price array
     # print(index)
     # we count down the array
-    while index > 1:
+    # while index > 1:
     # index = len(prices)
-    highest = -999999999999
-        index -= 1
-    #     find_max_profit(prices[index:])
+    # the highest should be waaaay less than zero since we'll get a lot of negative numbers
+    highest = float('-inf')
+    # we use the index to go backards
+        # find_max_profit(prices[index:])
         # print(prices)
-    # while index >0:
-    #     for i in range(index, len(prices)):
-    #         if prices[i] - prices[index - 1] > highest:
-    #             highest = prices[i] - prices[index -1]
-    #         # print(f"{prices[i] - prices[index - 1]}")
-    #     index -= 1
-    #     # print('*********')
-
-n = [i for i in range(10)]
-def recurse(array):
-    index = len(array) # 10
-    print(index)
-    if index > 1:
-        print(array[:index])
-        index -= 1 #9
-        print(index)
-
-
-    #     print(array[index:])
-    # while len(array) > 1:
-    #     recurse(array[index:])
-    #     index -= 1
-
-
-
-print(recurse(n))
-
-    # return highest
-
+    # Then we go count down with the index
+    while index > 0:
+        # go forward in the array
+        for i in range(index, len(prices)):
+            # check which profit is higer. We get a lot of negatives
+            if prices[i] - prices[index - 1] > highest:
+                # set the new highest to the highest
+                highest = prices[i] - prices[index -1]
+                # de increment the index
+        index -= 1
+        # return the highest profit
+    return highest
+        # print('*********')
 
 # for the first item we check them all.
 #     the second item we check the array excluding the first.
