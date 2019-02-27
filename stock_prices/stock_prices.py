@@ -2,6 +2,10 @@
 
 import argparse
 
+# base case would be an empty  array or a zero index
+# The path to base case would be going down.
+
+
 def find_max_profit(prices):
     # set index to length of array
     index = len(prices)
@@ -28,7 +32,9 @@ def find_max_profit(prices):
         # return the highest profit
     return highest
         # print('*********')
-
+# find the min and the max.
+# Can I buy?
+# If I can't buy then I have to move on to the next min.
 # for the first item we check them all.
 #     the second item we check the array excluding the first.
 #     the third item we check excluding the first and second
