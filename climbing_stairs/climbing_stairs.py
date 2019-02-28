@@ -12,17 +12,38 @@
 #             if we pick 1
 #                 3 - 1 = 2
 
+# if n = 0 then we know that we've reached the end.
+# Subtract 1, 2, or 3. When we get to zero that is one combination.
+# N
+# if n - 1 == 0 then increment combo.
+#     if it does not == zero then we have to check the difference. ie  n = 4 n - 2 == 0 So then we have to do climbing_stairs(n -2)
+
+
 
 import sys
 
 def climbing_stairs(n, cache=None):
+    combos = 0
+    if n <= 0:
+        combos += 1
+    else:
+        climbing_stairs(n - 1) + climbing_stairs(n - 2) + climbing_stairs(n - 3)
+        return combos
+    # base case is n <= 0
 
 
 
 
 
 
-climbing_stairs(3)
+
+
+
+
+
+
+
+print(climbing_stairs(5))
 
 
 # 3 stairs.
