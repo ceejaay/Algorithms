@@ -1,5 +1,18 @@
 #!/usr/bin/python
 
+# We have 3 options when it comes to the hopping.
+# 1 2, & 3.
+
+# So for n.
+# if we choose one of the above options, how many stairs are left?
+#     if n = 3
+#         if we pick 3 we have 0 stairs left. 3 - 3 = 0
+#             if we pick 2 
+#                 3 - 2 = 1
+#             if we pick 1
+#                 3 - 1 = 2
+
+
 import sys
 
 def climbing_stairs(n, cache=None):
